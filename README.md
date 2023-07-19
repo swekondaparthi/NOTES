@@ -6,3 +6,5 @@ https://github.com/openshift/oc-mirror
 
 https://ostechnix.com/linux-command-line-tricks/
 
+https://github.com/wangzheng422/docker_env/blob/master/redhat/training/ansible/ansible_host_example
+
