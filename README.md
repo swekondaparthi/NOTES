@@ -15,5 +15,13 @@ https://medium.com/@tamber/poc-kyverno-policy-reporter-ui-on-openshift-4-x-f79ea
 https://medium.com/techloop/understanding-kyverno-policies-7e2d8651d7b1
 
 **How the scheduler determines resource availability**
-The scheduler uses the value of **node.Status.Allocatabl**e instead of node.Status.**Capacity** to decide if a node will become a candidate for pod scheduling.
+The scheduler uses the value of **node.Status.Allocatable** instead of node.Status.**Capacity** to decide if a node will become a candidate for pod scheduling.
+
+The problem with ConfigMaps is that we can't store sensitive data. ConfigMaps store the data in plain text or in the format in which we supply the data to the ConfigMaps.
+
+**Kubernetes Secrets**
+
+Kubernetes Secrets when created takes the data and **encodes them into hash using base64** and then stores it in the cluster. Once the secret is created we access the data by mounting them inside the pod or deployment.
+Secrets are created using command-line tools like Kubectl and oc commands are called the **Imperative way.**
+
 
