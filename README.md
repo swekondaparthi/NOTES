@@ -24,4 +24,8 @@ The problem with ConfigMaps is that we can't store sensitive data. ConfigMaps st
 Kubernetes Secrets when created takes the data and **encodes them into hash using base64** and then stores it in the cluster. Once the secret is created we access the data by mounting them inside the pod or deployment.
 Secrets are created using command-line tools like Kubectl and oc commands are called the **Imperative way.**
 
+Encode the sensitive data
+
+echo -n "mysql-db" | base64
+echo -n "password" | base64
 
