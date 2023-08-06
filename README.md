@@ -16,6 +16,9 @@ https://medium.com/@tamber/openshift-certificates-101-certificate-expiration-ale
 https://medium.com/@tamber/poc-kyverno-policy-reporter-ui-on-openshift-4-x-f79ea6a0818b
 https://medium.com/techloop/understanding-kyverno-policies-7e2d8651d7b1
 
+https://medium.com/globant/tracerouting-pod-to-pod-traffic-a45fabd86f77
+
+
 **How the scheduler determines resource availability**
 The scheduler uses the value of **node.Status.Allocatable** instead of node.Status.**Capacity** to decide if a node will become a candidate for pod scheduling.
 
