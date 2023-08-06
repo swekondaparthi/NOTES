@@ -37,3 +37,11 @@ echo -n "password" | base64
 Secrets separate the sensitive information for the application source code and store it in the cluster at the namespace level
 
 
+With import_role, the ansible-playbook command starts by parsing and inserting the role in the
+play before starting the execution. Ansible detects and reports syntax errors immediately and does
+not start the playbook execution.
+With include_role, however, Ansible parses and inserts the role in the play when it reaches the
+include_role task, during the play execution. If Ansible detects syntax errors in the role, then
+execution of the playbook is aborted.
+
+
