@@ -1,5 +1,7 @@
 # NOTES
 
+https://medium.com/lumigo/conquering-the-peaks-of-kubernetes-errors-ee2120db50d2
+
 https://github.com/wangzheng422/openshift4-shell/blob/ocp-4.10/operator.sh
 
 https://github.com/openshift/oc-mirror
@@ -28,4 +30,7 @@ Encode the sensitive data
 
 echo -n "mysql-db" | base64
 echo -n "password" | base64
+
+Secrets separate the sensitive information for the application source code and store it in the cluster at the namespace level
+
 
