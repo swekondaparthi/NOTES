@@ -44,4 +44,10 @@ With include_role, however, Ansible parses and inserts the role in the play when
 include_role task, during the play execution. If Ansible detects syntax errors in the role, then
 execution of the playbook is aborted.
 
+Simple Bash trick to find the **largest file**s on Disk
+
+"find /* -type f -exec du -sh {} + | sort -hr | head -n1
+
+
+
 
