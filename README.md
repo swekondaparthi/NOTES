@@ -18,6 +18,9 @@ https://medium.com/techloop/understanding-kyverno-policies-7e2d8651d7b1
 
 https://medium.com/globant/tracerouting-pod-to-pod-traffic-a45fabd86f77
 
+https://medium.com/@meng.yan/what-happens-when-deleting-a-pod-d1219c7e1b53
+
+
 
 **How the scheduler determines resource availability**
 The scheduler uses the value of **node.Status.Allocatable** instead of node.Status.**Capacity** to decide if a node will become a candidate for pod scheduling.
