@@ -20,6 +20,9 @@ https://medium.com/globant/tracerouting-pod-to-pod-traffic-a45fabd86f77
 
 https://medium.com/@meng.yan/what-happens-when-deleting-a-pod-d1219c7e1b53
 
+https://access.redhat.com/articles/4740011 : Red Hat Operators Supported in Disconnected Mode
+
+
 
 
 **How the scheduler determines resource availability**
