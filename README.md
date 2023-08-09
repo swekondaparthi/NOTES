@@ -24,6 +24,8 @@ https://medium.com/@meng.yan/what-happens-when-deleting-a-pod-d1219c7e1b53
 
 https://access.redhat.com/articles/4740011 : Red Hat Operators Supported in Disconnected Mode
 
+https://www.redhat.com/sysadmin/burn-rate-alerts-openshift
+
 
 https://www.redhat.com/sysadmin/openshift-terminating-state
 
