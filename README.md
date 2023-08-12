@@ -125,7 +125,9 @@ Usage of port 22623 in OpenShift 4 api-int : https://access.redhat.com/solutions
 **MCP:**
 https://www.redhat.com/en/blog/openshift-container-platform-4-how-does-machine-config-pool-work
 
+api-int.<cluster_name>.<base_domain>: VIP3
+The DNS records must be resolvable from all the nodes within the cluster.
 
-
+![image](https://github.com/swekondaparthi/NOTES/assets/8417059/d4073f36-40ee-47cf-85b9-352dd4b143e7)
 
 
