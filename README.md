@@ -1,5 +1,22 @@
 # NOTES
 
+#oc whoami -c
+
+Image streams allow administrators to use tags for referencing specific versions of container images.
+
+Source images are stored in image registries, such as registry.redhat.io, or the OpenShift integrated registry. On the contrary, **image streams are virtual references to source images, and **their metadata is stored in etcd.****
+
+https://access.redhat.com/documentation/en-us/openshift_container_platform/4.12/html-single/cli_tools/index#oc-policy-add-role-to-user
+
+OpenShift builds on Kubernetes and its extensibility, adding features such as **logging, monitoring, and authentication.**
+
+OpenShift Container Platform is a certified Kubernetes distribution
+
+OpenShift provides the oc and kubectl and command-line tools. The oc command adds OpenShift features to the kubectl command.
+kubectl and oc in OpenShift are the same binary. The oc binary embeds kubectl code
+
+
+
 oc get events -o template --template '{{range .items}}{{.message}}{{"\n"}}{{end}}'
 
 https://medium.com/lumigo/conquering-the-peaks-of-kubernetes-errors-ee2120db50d2
@@ -130,7 +147,24 @@ The DNS records must be resolvable from all the nodes within the cluster.
 
 RHEL NFS does not fully support all POSIX locking and caching semantics. Testing
 uncovered issues with certain apps using shared storage, such as the internal registry
-and HA databases. Therefore, using RHEL NFS to back PVs used by core services is
-not recommended.
+and HA databases. Therefore, using RHEL NFS to back PVs used by core services is not recommended.
+
+
+Download and extract the **root CA certificates from vCenter.**
+wget vcenter.sddc.vmwaremc.com/downloads/certs/download.zip
+
+vSphere volumes are backed by VMware vSphere Virtual Machine Disk (VMDK) files. Because
+vSphere volumes are provided by a traditional virtualization platform, they have the following limitations compared to OpenShift Data Foundation:
+
+Support for **RWO** access mode only
+No regional HA or portability
+**Incompatible with volume snapshots**
+**Vendor lock-in**
+
+The control plane and compute nodes in an OpenShift cluster frequently communicate with each other. **All communication between cluster nodes is protected by mutual authentication
+based on per-node TLS certificates.***
+
+All per-node TLS certificates have a short expiration life of 24 hours (the first time) and **30 days** (after renewal).
+
 
 
