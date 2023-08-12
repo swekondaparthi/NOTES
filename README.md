@@ -1,10 +1,16 @@
 # NOTES
 
 #oc whoami -
+#oc get deployment/hello -o json | jq '.spec.template.spec.containers[0].image'
+
+Identify the container image specified by the deployment.
+oc get deployment/hello -o json | jq '.spec.template.spec.containers[0].image'
 
 Image streams allow administrators to use tags for referencing specific versions of container images.
 
 Source images are stored in image registries, such as registry.redhat.io, or the OpenShift integrated registry. On the contrary, **image streams are virtual references to source images, and **their metadata is stored in etcd.****
+
+**Image streams use a unique SHA256 identifier instead of a mutable image tag.** This approach is more reliable than standard container image tags, such as :latest or :v2.1, where the tagged image can change without notice.
 
 https://access.redhat.com/documentation/en-us/openshift_container_platform/4.12/html-single/cli_tools/index#oc-policy-add-role-to-user
 
