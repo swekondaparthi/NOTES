@@ -1,6 +1,6 @@
 # NOTES
 
-#oc whoami -c
+#oc whoami -
 
 Image streams allow administrators to use tags for referencing specific versions of container images.
 
