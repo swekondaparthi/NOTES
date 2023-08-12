@@ -99,7 +99,31 @@ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{
 
 
 
+**Installing** an OpenShift Cluster on **vSphere** with Pre-existing Infrastructure.
 
+Download the installer binary, oc tools, and pull secret from the Red Hat OpenShift Cluster Manager site.
+Download the root CA certificates for vCenter and add them to your bastion VM.
+Download the bare metal install image.
+Verify DNS, HAproxy, and Apache Web server configurations.
+Manually create the install-config.yaml file.
+Create the manifest files.
+Modify the manifest/cluster-schedular-02 file to reflect uppercase False.
+Create the ignition files.
+Make the ignition files available via HTTPD.
+Create append-bootstrap.ign to point to the URL for bootstrap.ign.
+Convert the ignition files using base64 encoding.
+Download the RHCOS.ova file and deploy the template.
+Clone the template to create cluster VMs.
+Add base64 encoding of ignition files to the corresponding VMs.
+Power on the VM and pass kernel line arguments to customize the cluster VMs.
+Use the openshift-install binary to monitor the bootstrapping process.
+Remove the bootstrap entry from the load balancer after bootstrapping completes.
+Use the openshift-install binary to monitor the deployment progress until completion. 
+
+Usage of port 22623 in OpenShift 4 api-int : https://access.redhat.com/solutions/4926401
+
+**MCP:**
+https://www.redhat.com/en/blog/openshift-container-platform-4-how-does-machine-config-pool-work
 
 
 
