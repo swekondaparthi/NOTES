@@ -172,5 +172,8 @@ based on per-node TLS certificates.***
 
 All per-node TLS certificates have a short expiration life of 24 hours (the first time) and **30 days** (after renewal).
 
+Proper administration of an OpenShift cluster requires awareness and mitigation of various capacity issues that arise during operation.
+
+
 
 
