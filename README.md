@@ -1,5 +1,8 @@
 # NOTES
 
+Navigate to the Discover view, and then click New. Select the app index pattern, and then enter **kubernetes.flat_labels:"app=app1"** in the text field.The results display the total number of log records for the app1 deployment.
+
+
 #oc whoami -
 #oc get deployment/hello -o json | jq '.spec.template.spec.containers[0].image'
 
@@ -173,6 +176,7 @@ based on per-node TLS certificates.***
 All per-node TLS certificates have a short expiration life of 24 hours (the first time) and **30 days** (after renewal).
 
 Proper administration of an OpenShift cluster requires awareness and mitigation of various capacity issues that arise during operation.
+
 
 
 
