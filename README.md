@@ -1,5 +1,27 @@
 # NOTES
 
+OpenShift does not inherit permissions from the LDAP server; permissions must be added to each group.
+
+#openssl x509 -in tls.crt -noout -dates
+
+#oc get events --sort-by='.lastTimestamp' -n openshift-kube-apiserver
+
+
+Adding your certificates to the **cluster proxy** ensures that your web console pods can trust the authentication pods and vice versa.
+
+The Red Hat OpenShift Container Platform installer creates an **internal certificate authority (CA)** and uses this CA to sign additional certificates.
+
+The certificate used by the **ingress controller operator is a wildcard certificate** for all routes in the .apps subdomain for your cluster, such as .apps.ocp4.example.com. Routes for the webconsole, Grafana, Prometheus, and OAuth use this same wildcard certificate.
+
+The ingress operator configures the ingress controller to route traffic into the OpenShift environment. The certificate used by the ingress controller can be updated so that it uses a
+certificate signed by a recognized certificate authority, or by your own enterprise CA. Changing the ingress controller operator to use a different certificate and its associated key only requires a handful of steps. Before starting this process, you need:
+
+
+
+The only clients that implicitly trust certificates signed by the internal OpenShift certificate authority are other components within the OpenShift cluster. Therefore,
+these certificates should not be replaced.
+
+
 Navigate to the Discover view, and then click New. Select the app index pattern, and then enter **kubernetes.flat_labels:"app=app1"** in the text field.The results display the total number of log records for the app1 deployment.
 
 
