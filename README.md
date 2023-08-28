@@ -1,5 +1,7 @@
 # NOTES
 
+https://komodor.com/learn/how-to-fix-errimagepull-and-**imagepullbackoff**/
+
 OpenShift does not inherit permissions from the LDAP server; permissions must be added to each group.
 
 #openssl x509 -in tls.crt -noout -dates
