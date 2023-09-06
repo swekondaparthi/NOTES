@@ -2,6 +2,14 @@
 
 oc get events --sort-by='.lastTimestamp'
 
+curl -v -k https://oauth-openshift.apps.ocp4.example.com 2>&1 | grep -w date
+
+curl -v -k https://console-openshift-console.apps.ocp4.example.com 2>&1 | grep -E 'date|expired'
+
+openssl x509 -in ca-bundle.crt -noout -subject -issuer -dates -serial
+
+Although this example checks the certificate for the OAuth URL, the same certificate is used for the web console
+
 https://komodor.com/learn/how-to-fix-errimagepull-and-**imagepullbackoff**/
 
 The certificate used by the ingress controller operator is a wildcard certificate for all routes in the .apps subdomain for your cluster, such as .apps.ocp4.example.com. Routes for the web console, Grafana, Prometheus, and OAuth use this same wildcard certificate.
