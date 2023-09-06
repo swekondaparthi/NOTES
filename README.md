@@ -1,5 +1,7 @@
 # NOTES
 
+oc get events --sort-by='.lastTimestamp'
+
 https://komodor.com/learn/how-to-fix-errimagepull-and-**imagepullbackoff**/
 
 The certificate used by the ingress controller operator is a wildcard certificate for all routes in the .apps subdomain for your cluster, such as .apps.ocp4.example.com. Routes for the web console, Grafana, Prometheus, and OAuth use this same wildcard certificate.
