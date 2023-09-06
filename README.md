@@ -1,5 +1,9 @@
 # NOTES
 
+curl -v -k https://api.ocp4.example.com:6443 2>&1 | grep -w date
+
+curl -v $(oc whoami --show-console) 2>&1 | grep 'SSL certificate verify ok.'
+
 oc get events --sort-by='.lastTimestamp'
 
 curl -v -k https://oauth-openshift.apps.ocp4.example.com 2>&1 | grep -w date
