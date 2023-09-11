@@ -1,5 +1,14 @@
 # NOTES
 
+All communication between cluster nodes is protected by mutual authentication based on per-node TLS certificates.
+
+The **OpenShift installer** handles creating and approving TLS certificate signing requests (CSRs) for the Full-stack Automation installation method. The system administrator manually approves these CSRs for the Preexisting Infrastructure installation method
+
+All per-node **TLS certificates have a short expiration life of 24 hours (the first time) and 30 days (after renewal).** When they are about to expire, the affected cluster nodes create new CSRs, and the control plane automatically approves them
+
+kubectl and oc in OpenShift are the same binary. The oc binary embeds kubectl code. Execute the binary using the kubectl name to invoke the kubectl code and features.
+
+
 curl -v -k https://api.ocp4.example.com:6443 2>&1 | grep -w date
 
 curl -v $(oc whoami --show-console) 2>&1 | grep 'SSL certificate verify ok.'
